@@ -26,7 +26,7 @@ class LuxAndroidPlugin implements Plugin<Project> {
     }
 
     project.task('copyLuxClasses', type: Copy).configure({
-     from "$project.buildDir/$project.lux.classesPath"
+     from "${project.buildDir}/${project.lux.classesPath}"
      into "$project.buildDir/intermediates/classes/$project.lux.build"
     }).dependsOn(project.tasks.compileLux)
 

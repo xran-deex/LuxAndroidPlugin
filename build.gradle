@@ -2,16 +2,17 @@ apply plugin: 'groovy'
 apply plugin: 'maven'
 
 repositories {
-    flatDir {
-        dirs "."
-    }
+    mavenLocal()
+    // flatDir {
+    //     dirs "."
+    // }
 }
 
 dependencies {
   compile gradleApi()
   compile localGroovy()
-  compile "com.github.luxlang:LuxGradlePlugin:0.1-SNAPSHOT"
+  compile "com.github.luxlang:LuxGradlePlugin:0.3-SNAPSHOT"
 }
 
 group = 'com.github.luxlang'
-version = '0.1-SNAPSHOT'
+version = '0.3-SNAPSHOT'
